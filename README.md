@@ -1,88 +1,23 @@
-# Digital Carbon Footprint Lab
+# Pegada De Carbono Digital Da Turma
 
-Digital carbon footprint lab using fictional device and streaming usage data.
+Calculo didatico de emissao estimada por uso digital com ranking sintetico.
 
-## Overview
+> Projeto educacional inspirado na EETEPA Vilhena Alves. Não é sistema oficial institucional e não usa dados reais de estudantes.
 
-**Curricular code:** P16  
-**Discipline:** Digital Transformation I and Environmental Education  
-**Difficulty:** Introductory  
-**Dataset reference:** Synthetic digital habit survey sample  
-**Primary source:** Local synthetic sample
+## Visão Geral
 
-This repository is an educational portfolio project for the first module of a technical Data Science curriculum. It uses a small safe sample by default and provides a script that documents how a real public dataset could be obtained or prepared later.
+**Código curricular:** P16  
+**Curso/área:** Técnico em Ciência de Dados  
+**Disciplina:** Transformacao Digital I E Educacao Ambiental  
+**Dificuldade:** Introductory
 
-No large dataset, private school document, real student record, or personal contact detail is versioned in this repository.
+Este repositório é um MVP executável para portfólio e prática em sala. O comando padrão usa somente amostras seguras em `data/sample/` e gera saídas locais em `data/processed/`, `charts/` ou `reports/`.
 
-## Concepts Practiced
+## Competências Praticadas
 
-- arithmetic operations
-- barh
-- sort_values
-- storytelling
-
-## Repository Structure
-
-```text
-data/
-  sample/       # small safe sample used by smoke tests
-  raw/          # external raw files, ignored except .gitkeep
-  processed/    # generated outputs, ignored except .gitkeep
-notebooks/
-  01_exploracao.ipynb
-scripts/
-  download_data.py
-src/
-  main.py
-charts/
-reports/
-```
-
-## Quick Start
-
-```bash
-python -m venv .venv
-.venv\Scripts\activate
-pip install -r requirements.txt
-python -m src.main --sample
-```
-
-Linux/macOS activation:
-
-```bash
-source .venv/bin/activate
-```
-
-## Data Policy
-
-- The default workflow uses only sample data committed to `data/sample/`.
-- Real public datasets should be downloaded manually or through `scripts/download_data.py` after reviewing the source terms.
-- Generated outputs are written to `data/processed/`, `charts/`, or `reports/`.
-
----
-
-# Digital Carbon Footprint Lab
-
-Digital carbon footprint lab using fictional device and streaming usage data.
-
-## Visao Geral
-
-**Codigo curricular:** P16  
-**Disciplina:** Transformacao Digital I e Educacao Ambiental  
-**Dificuldade:** Introdutorio  
-**Referencia de dataset:** Synthetic digital habit survey sample  
-**Fonte primaria:** Local synthetic sample
-
-Este repositorio e um projeto educacional de portfolio para o primeiro modulo de um curso tecnico em Ciencia de Dados. Ele usa uma amostra pequena e segura por padrao e traz um script que documenta como um dataset publico real poderia ser obtido ou preparado depois.
-
-Nenhum dataset grande, documento interno escolar, registro real de estudante ou contato pessoal e versionado neste repositorio.
-
-## Conceitos Praticados
-
-- arithmetic operations
-- barh
-- sort_values
-- storytelling
+- leitura de dados
+- processamento local
+- relatório reprodutível
 
 ## Como Rodar
 
@@ -93,12 +28,18 @@ pip install -r requirements.txt
 python -m src.main --sample
 ```
 
-## Politica De Dados
+No Linux/macOS:
 
-- O fluxo padrao usa apenas dados de amostra em `data/sample/`.
-- Datasets publicos reais devem ser baixados manualmente ou por `scripts/download_data.py` apos revisao dos termos da fonte.
-- Saidas geradas ficam em `data/processed/`, `charts/` ou `reports/`.
+```bash
+source .venv/bin/activate
+```
 
-## License
+## Operação Segura
 
-MIT. See [LICENSE](LICENSE).
+- O CI usa apenas dados sintéticos e não depende de APIs externas.
+- Coletas reais, quando existirem, devem ocorrer apenas em ambiente autorizado.
+- Nenhum dataset grande, documento interno escolar, telefone, e-mail pessoal ou dado real de estudante é versionado.
+
+## Licença
+
+MIT. Consulte [LICENSE](LICENSE).
